@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Redirect to GitHub Repo</title>
+
+    <!-- Import Alta font -->
+    <link href="https://fonts.googleapis.com/css2?family=Alta:wght@400;700&display=swap" rel="stylesheet">
+
+    <style>
+        /* Apply Alta font */
+        body {
+            font-family: 'Alta', sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f4f4f4;
+        }
+
+        /* Responsive iframe */
+        .responsive-frame {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            max-width: 1200px;
+            padding-bottom: 56.25%; /* 16:9 ratio */
+        }
+
+        .responsive-frame iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+
+        /* Styling for Walleria Suri's name */
+        .name-overlay {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: #333;
+            font-size: 2.5em;
+            font-weight: bold;
+            text-align: center;
+            z-index: 10;
+            background: rgba(255, 255, 255, 0.8);
+            padding: 10px;
+            border-radius: 8px;
+        }
+
+        /* Responsive text size */
+        @media (max-width: 768px) {
+            .name-overlay {
+                font-size: 1.8em;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .name-overlay {
+                font-size: 1.4em;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="responsive-frame">
+        <!-- Overlay for Walleria Suri's name -->
+        <div class="name-overlay">
+            Walleria Suri
+        </div>
+        <!-- Iframe for embedding GitHub repo page -->
+        <iframe src="https://github.com/efantinatti/walleriasuri/index.html" title="Walleria Suri"></iframe>
+    </div>
+
+</body>
+</html>
